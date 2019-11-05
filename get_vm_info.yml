@@ -1,12 +1,13 @@
 ---
 - name: Example playbook to get facts about virtual machine
-  hosts: localhost
+  hosts: all
+#  hosts: local
   tasks:
     - name: Gather some facts from a guest using the vSphere API output schema
       vmware_guest_facts:
-        hostname: "192.168.250.3"
-        username: "administrator@vsphere.local"
-        password: "P@ssw0rd"
+#        hostname: "192.168.250.3"
+#        username: "administrator@vsphere.local"
+#        password: "P@ssw0rd"
         validate_certs: no
         datacenter: "ESG-DC"
         folder: /
