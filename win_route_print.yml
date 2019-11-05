@@ -1,0 +1,9 @@
+---
+- name: test cmd from win_command module of ansible
+  hosts: all
+  tasks:
+    - name: run route print
+      win_command: route print
+      register: route
+    - debug: var=route
+
